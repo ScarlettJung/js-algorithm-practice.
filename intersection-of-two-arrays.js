@@ -27,3 +27,20 @@ function intersection (nums1, nums2) {
  return result;
 }      
 console.log(intersection(nums1, nums2));
+
+
+
+일요일 수업전까지 요것도 풀어보기 
+// 문제
+
+// 두 배열이 있습니다.
+
+// nums1 = [4,9,5]
+// nums2 = [9,4,9,8,4]
+
+// 두 배열에 공통으로 들어 있는 숫자들을 반환하세요.
+
+// 하지만 이번에도 조건이 있습니다.
+
+// 중복 개수까지 맞춰야 합니다.
+
