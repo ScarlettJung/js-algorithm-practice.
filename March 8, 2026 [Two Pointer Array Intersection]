@@ -37,3 +37,89 @@ function intersectWithPointer(nums1,nums2){
 }
  console.log(intersectWithPointer(nums1,nums2));
 
+
+숙제: 1주차 모던웹 3계층 구조 복습
+웹 앱은 사실 3개의 파트로 나뉜다 (3-Tier Architecture)
+1. Frontend (사용자 화면)
+사용자가 보고 클릭하는 화면
+예: 버튼, 페이지, 입력창
+사용 기술
+HTML
+CSS
+JavaScript
+
+Backend (두뇌 역할)
+사용자가 요청한 것을 실제로 처리하는 곳
+
+예
+사용자가
+"수업 추가해주세요"
+→ 서버가 처리
+사용 기술
+Node.js
+Express
+
+3. Database (저장소)
+정보를 저장하는 곳
+이번 프로젝트에서는
+JSON 파일로 저장
+데이터 창고
+
+==>
+Frontend	화면
+Backend	계산 / 처리
+Database	저장
+
+JSON 규칙 (중요한 것만)
+ 반드시 " " 사용 Key도 따옴표 필요 / 마지막에 쉼표 금지
+
+JSON ↔ JavaScript 변환
+
+컴퓨터 안에서는 객체(Object)
+파일이나 네트워크에서는 JSON 문자열
+그래서 변환이 필요합니다.
+JSON → JS
+
+웹은 대화 구조
+
+웹은 브라우저 ↔ 서버 대화입니다.
+
+브라우저
+"데이터 주세요"
+서버
+"여기 있습니다"
+
+HTTP Method (웹의 행동)
+Method	의미
+GET	데이터 보기
+POST	데이터 만들기
+PUT	수정
+DELETE	삭제
+
+Event Loop (이벤트 루프)
+Node.js는
+이 루틴을 계속 반복
+요청 받기
+→ 처리 시작
+→ 다음 요청 받기
+→ 완료되면 전달
+→ 반복
+
+웹 앱 구조
+Frontend (화면)
+↓
+Backend (처리)
+↓
+Database (저장)
+
+원래 JS는 브라우저에서만 실행
+예
+Chrome/ Safari/Edge 안에서만 돌아감
+
+그런데 Node.js가 나오면서 바뀜 이제 JS를 서버에서도 실행 가능 그래서
+const express = require("express") 같은 코드로 웹 서버 만들 수 있음
+
+개념	의미
+JS	프로그래밍 언어
+Node.js	JS 실행 프로그램
+Express	서버 쉽게 만드는 도구
