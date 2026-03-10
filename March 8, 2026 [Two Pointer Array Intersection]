@@ -1,0 +1,39 @@
+// [코딩 과제] 정렬과 투 포인터를 이용한 교집합 구하기 
+// 문제 설명: 
+// 두 개의 정수 배열 nums1과 nums2가 주어집니다. 
+// 두 배열에 공통으로 포함된 요소들을 배열로 반환하는 함수를 
+// 작성하세요. 
+// 조건: 
+// 1. 반드시 sort() 메서드를 사용하여 
+// 두 배열을 먼저 오름차순으로 정렬하세요. 
+// 2. 정렬된 배열 위에서 투 포인터(Two Pointer)
+//  알고리즘을 사용하여 교집합을 찾으세요. 
+// 3. 중복된 숫자의 개수까지 정확히 일치해야 합니다.
+//  (예: 한쪽에 2가 두 개, 다른 쪽에 세 개 있다면 교집합에는 
+// 두 개가 포함되어야 함) 
+// 입력 데이터: 
+let nums1 = [4, 9, 5] 
+let nums2 = [9, 4, 9, 8, 4] 
+
+function intersectWithPointer(nums1,nums2){
+    nums1.sort((a,b)=> a-b);
+    nums2.sort((a,b)=> a-b);
+    let p1 = 0;
+    let p2 = 0; 
+    let result=[];
+
+    while(p1 <nums1.length && p2 <nums2.length){
+        if (nums1[p1]===nums2[p2]){
+            result.push(nums1[p1])
+            p1++;
+            p2++;
+        } else if (nums1[p1]< nums2[p2]){
+            p1++;
+        } else{
+            p2++;
+        }
+    }
+  return result;
+}
+ console.log(intersectWithPointer(nums1,nums2));
+
